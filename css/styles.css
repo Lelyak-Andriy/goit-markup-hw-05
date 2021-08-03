@@ -334,6 +334,47 @@ Letter spacing: 0.03em;
   background: #188ce8;
 }
 
+/* МОДАЛЬНЕ ВІКНО */
+ .backdrop{  
+  position:fixed;
+  top: 0; 
+  left: center;
+  background: rgba(0, 0, 0, 0.1);
+  width: 1600px;
+  height: 1024px;
+ } 
+.backdrop.is-hidden{
+  visibility:hidden;
+  opacity: 0;
+  pointer-events: none;  
+}
+
+.modal{
+height:581px ;
+width:528px ;
+background-color: var(--primary-bgc);
+position:absolute;
+top:50%;
+left:50%;
+transform: translate(-50%, -50%);
+z-index: 1
+}
+
+.button-close-modal{
+  position:absolute;
+  top: 8px;
+  right:8px;
+  width:30px ;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--primary-bgc);
+}
+
+.icon-close{
+  width: 18px;
+  height: 18px;
+}
+
 /* Якості  */
 
 /* .hidden-title { 
@@ -403,6 +444,7 @@ Letter spacing: 0.03em;
 
 .busyness {
   display: flex;
+  
 }
 .busyness-item {
   flex-direction: row;
@@ -410,6 +452,41 @@ Letter spacing: 0.03em;
 .busyness-item + .busyness-item {
   margin-left: 30px;
 }
+
+/* .box{ 
+margin-left: auto;
+margin-right: auto;
+position: relative;
+overflow: hidden;   
+}*/
+
+/* .overlay{  
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+height: 70px;
+opacity: 1;
+background-color:rgba(47, 48, 58, 0.8);
+/* transform: translateY(-100%); */
+ } */
+
+/* .box:hover .overlay {  */
+  /* opacity: 1; */
+   /* transform: translateY(224px);   */
+
+
+/* .overlay-text{ 
+  padding: 27px 82px;
+font-weight: 700;
+font-size: 14px;
+line-height: 1.14;
+text-transform: uppercase;
+text-align: center;
+color: var(--text-white);
+}*/
+
+
 /* Команда */
 .team {
   background-color: var(--secondary-bgc);

@@ -320,6 +320,8 @@ Letter spacing: 0.03em;
 
 /* Кнопка */
 .service {
+  display: inline-block;
+  padding: 10px 32px;
   color: var(--text-white);
   background: var(--accent-color);
   font-family: inherit;
@@ -328,21 +330,26 @@ Letter spacing: 0.03em;
   line-height: 1.87;
   letter-spacing: 0.06em;
   border-radius: 4px;
+  border: transparent;
+  text-align: center;
 }
 .service:hover,
 .service:focus {
   background: #188ce8;
 }
+  
+
 
 /* МОДАЛЬНЕ ВІКНО */
  .backdrop{  
   position:fixed;
   top: 0; 
-  left: center;
+  right: center;
   background: rgba(0, 0, 0, 0.1);
-  width: 1600px;
-  height: 1024px;
+  width: 100%;
+  height: 100%;
  } 
+
 .backdrop.is-hidden{
   visibility:hidden;
   opacity: 0;
@@ -350,29 +357,34 @@ Letter spacing: 0.03em;
 }
 
 .modal{
-height:581px ;
-width:528px ;
-background-color: var(--primary-bgc);
 position:absolute;
+min-height:581px ;
+min-width:528px ;
+background-color: var(--primary-bgc);
 top:50%;
 left:50%;
 transform: translate(-50%, -50%);
-z-index: 1
+/* transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);  */
 }
 
 .button-close-modal{
-  position:absolute;
-  top: 8px;
-  right:8px;
-  width:30px ;
-  height: 30px;
-  border-radius: 50%;
-  background: var(--primary-bgc);
+display: inline-block;
+position:absolute;
+top: 8px;
+right:8px;
+width:30px ;
+height: 30px;
+padding:6px;
+border-radius: 50%;   
+background: var(--primary-bgc);
+border: 1px solid rgba(0, 0, 0, 0.1); 
+text-align: center;
 }
 
 .icon-close{
   width: 18px;
   height: 18px;
+  fill:#000000;
 }
 
 /* Якості  */
@@ -453,14 +465,14 @@ z-index: 1
   margin-left: 30px;
 }
 
-/* .box{ 
+ .box{ 
 margin-left: auto;
 margin-right: auto;
 position: relative;
 overflow: hidden;   
-}*/
+}
 
-/* .overlay{  
+.overlay{  
 position: absolute;
 bottom: 0;
 left: 0;
@@ -469,14 +481,14 @@ height: 70px;
 opacity: 1;
 background-color:rgba(47, 48, 58, 0.8);
 /* transform: translateY(-100%); */
- } */
+ } 
 
 /* .box:hover .overlay {  */
   /* opacity: 1; */
    /* transform: translateY(224px);   */
 
 
-/* .overlay-text{ 
+ .overlay-text{ 
   padding: 27px 82px;
 font-weight: 700;
 font-size: 14px;
@@ -484,7 +496,7 @@ line-height: 1.14;
 text-transform: uppercase;
 text-align: center;
 color: var(--text-white);
-}*/
+}
 
 
 /* Команда */
@@ -664,9 +676,9 @@ margin-right: 10px;
 .primary-button:focus {
   color: var(--text-white);
   background-color: var(--accent-color);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
-   0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
+   0px 1px 1px rgba(0, 0, 0, 0.14), 
+  0px 2px 1px rgba(0, 0, 0, 0.2); 
 }
 
 .choise:not(:last-child) {
